@@ -4,8 +4,28 @@
   "description": "personal blog website",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"start": "npm run build && npm run dev",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seansean11/personal-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seansean11/personal-website/issues"
   },
   "author": "Señor Sean Michael",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "elm-webpack-loader": "^2.0.1",
+    "file-loader": "^0.8.5",
+    "postcss-cssnext": "^2.5.2",
+    "postcss-loader": "^0.8.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.15",
+    "webpack-dev-server": "^1.14.1"
+  }
 }

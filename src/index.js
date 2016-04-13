@@ -1,5 +1,3 @@
-require('basscss/css/basscss.css');
-require('font-awesome/css/font-awesome.css');
 require('./index.html');
 
 var Elm = require('./Main.elm');
@@ -19,4 +17,4 @@ app.ports.askDeleteConfirmation.subscribe(function (args) {
   if (response) {
     app.ports.getDeleteConfirmation.send(id);
   }
-})
+});
