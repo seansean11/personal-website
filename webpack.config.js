@@ -1,6 +1,6 @@
-const autoprefixer = require('autoprefixer');
-const cssnext = require('postcss-cssnext');
-const path = require('path');
+var autoprefixer = require('autoprefixer');
+var cssnext = require('postcss-cssnext');
+var path = require('path');
 
 module.exports = {
 	entry: {
@@ -16,11 +16,8 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-					'postcss-loader'
-        ]
+				exclude: /node_modules/,
+        loaders: 'style-loader!css-loader!postcss-loader'
       },
       {
         test:    /\.html$/,
