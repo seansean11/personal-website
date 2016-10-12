@@ -7,6 +7,8 @@ module.exports = {
 		app: './src/index.js'
 	},
 
+	historyApiFallback: true,
+
 	output: {
     path: path.resolve(__dirname + '/dist'),
     filename: '[name].js'
